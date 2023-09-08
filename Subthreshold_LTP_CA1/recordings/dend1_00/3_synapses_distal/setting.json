@@ -1,0 +1,38 @@
+{
+    "protocol": {
+        "Makara_LTP": {
+            "LTP_STIMULI_NUM": 50,
+            "LTP_INTERVAL": 333.33,
+            "LTP_START": 12000,
+            "PRELTP_TEST_NUM": 6,
+            "PRELTP_TEST_INTERVAL": 2000,
+            "PRELTP_TEST_START": 500,
+            "POSTLTP_TEST_NUM": 6,
+            "POSTLTP_TEST_INTERVAL": 2000,
+            "POSTLTP_TEST_START": 29000
+        }
+    },
+    "simulation": {
+        "DT": 0.025,
+        "RECORDING_STEP": 1.0,
+        "TSTOP": 40000,
+        "NUM_SEGMENTS": 8,
+        "SEG_DURATION": 5000
+    },
+    "synapse": {
+        "AMPA_DTAU": 15.0,
+        "AMPA_E": 0,
+        "AMPA_PTAU": 15.0,
+        "AMPA_START": 0,
+        "AMPA_TAU1": 0.1,
+        "AMPA_TAU2": 1,
+        "AMPA_GMAX": 0.0006,
+        "AMPA_P0": 0.0035,
+        "AMPA_D0": 0.001,
+        "NMDA_E": 0,
+        "NMDA_TAU1": 2,
+        "NMDA_TAU2": 50,
+        "NMDA_GMAX": 0.0008,
+        "SCALING_FACTOR": 1.0
+    }
+}
