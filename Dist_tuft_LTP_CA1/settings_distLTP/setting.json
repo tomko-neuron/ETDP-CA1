@@ -1,0 +1,74 @@
+{
+  "protocol": {
+    "theta_burst": {
+      "TB_STIMULI_NUM": 5,
+      "TB_INTERSPIKE_INTERVAL": 10,
+      "TB_BURSTS_NUM": 5,
+      "TB_INTERBURST_INTERVAL": 200,
+      "TB_PATTERNS_NUM": 3,
+      "TB_PATTERNS_INTERVAL": 3000,
+      "TB_START": 200,
+      "TB_STIMULATED_PERC": 1.0
+    },
+    "theta_burst_iclamp": {
+      "TB_ICLAMP_AMP": 1.4,
+      "TB_ICLAMP_DUR": 3,
+      "TB_ICLAMP_STIMULI_NUM": 3,
+      "TB_ICLAMP_INTERSPIKE_INTERVAL": 20,
+      "TB_ICLAMP_BURSTS_NUM": 5,
+      "TB_ICLAMP_INTERBURST_INTERVAL": 200,
+      "TB_ICLAMP_PATTERNS_NUM": 3,
+      "TB_ICLAMP_PATTERNS_INTERVAL": 3000,
+      "TB_ICLAMP_START": 207
+    },
+    "SEClamp": {
+      "DUR1": 10000,
+      "AMP1": -70.0
+    }
+  },
+  "simulation": {
+    "DT": 0.025,
+    "RECORDING_STEP": 1.0,
+    "TSTOP": 10000,
+    "NUM_SEGMENTS": 5,
+    "SEG_DURATION": 2000,
+    "SEED": 1
+  },
+  "synapse": {
+    "AMPA_DTAU": 15.0,
+    "AMPA_E": 0,
+    "AMPA_PTAU": 15.0,
+    "AMPA_START": 0,
+    "AMPA_TAU1": 0.2,
+    "AMPA_TAU2": 2,
+    "AMPA_GMAX": 0.00018,
+    "AMPA_P0": 0.09,
+    "AMPA_D0": 0.012,
+    "NMDA_E": 0,
+    "NMDA_TAU1": 1,
+    "NMDA_TAU2": 50,
+    "NMDA_GMAX": 0.00018,
+    "SCALING_FACTOR": 1.0
+  },
+  "dends_recordings": [
+    "dendA5_011111111111111111",
+    "dendA5_011111111111111110",
+    "dendA5_0111111111111111111",
+    "dendA5_0111111111111111101",
+    "dendA5_0111111111111111100",
+    "dendA5_01111111111111111111",
+    "dendA5_01111111111111111110",
+    "dendA5_01111111111111111011",
+    "dendA5_01111111111111111010",
+    "dendA5_011111111111111111111",
+    "dendA5_011111111111111111110",
+    "dendA5_011111111111111111101",
+    "dendA5_011111111111111111100",
+    "dendA5_011111111111111110111",
+    "dendA5_011111111111111110110",
+    "dendA5_0111111111111111111111",
+    "dendA5_0111111111111111111110",
+    "dendA5_0111111111111111111011",
+    "dendA5_0111111111111111111010"
+  ]
+}
