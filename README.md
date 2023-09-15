@@ -1,5 +1,5 @@
 # ETDP-CA1
-This repository contains the code for the models used in "A voltage-based Event-Timing-Dependent Plasticity rule accounts for LTP subthreshold and suprathreshold for dendritic spikes in CA1 pyramidal neurons " Tomko et al. (2023).
+This repository contains the code for the models used in [A voltage-based Event-Timing-Dependent Plasticity rule accounts for LTP subthreshold and suprathreshold for dendritic spikes in CA1 pyramidal neurons](https://doi.org/10.21203/rs.3.rs-3333583/v1) Tomko et al. (preprint, Journal of Computational Neuroscience, 2023).
 
 To run:
 
