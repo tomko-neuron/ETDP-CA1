@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Tomko"
+  given-names: "Matus"
+  orcid: "https://orcid.org/0000-0002-2915-1780"
+title: "A voltage-based Event-Timing-Dependent Plasticity rule accounts for LTP subthreshold and suprathreshold for dendritic spikes in CA1 pyramidal neurons"
+version: 1.0.0
+doi: 10.5281/zenodo.8348967
+date-released: 2023-09-15
+url: "https://github.com/tomko-neuron/ETDP-CA1"
