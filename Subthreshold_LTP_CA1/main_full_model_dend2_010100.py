@@ -239,6 +239,5 @@ if __name__ == '__main__':
     cell = prepare_model(data)
     set_simulation_settings()
     # run_segmented_simulation(cell=cell)
-    # run_full_simulation(cell=cell)
     ioh.delete_temporary_files()
-    figures()
+    # figures()

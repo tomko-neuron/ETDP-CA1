@@ -1,0 +1,144 @@
+{
+    "BCM": {
+        "BCM_ALPHA": 1500,
+        "BCM_ORI_D0": 1e-05,
+        "BCM_ORI_P0": 1e-05,
+        "BCM_RAD_D0": 0.0001,
+        "BCM_RAD_P0": 0.0001,
+        "BCM_LM_D0": 2e-06,
+        "BCM_LM_P0": 5e-05,
+        "BCM_SCOUNT0": 0.0,
+        "BCM_SCOUNTTAU": 10000
+    },
+    "netstim": {
+        "NETSTIM_FREQUENCY": 0.5,
+        "NETSTIM_NUMBER": 3,
+        "NETSTIM_SEED": 10,
+        "NETSTIM_START": 200,
+        "NETSTIM_NOISE": 0.0,
+        "GAUSS_SD": 40,
+        "GAUSS_DELAY": 50,
+        "NETSTIMRES_RESONANCE": 125,
+        "NETSTIMRES_INTERVAL": 125,
+        "NETSTIMRES_NUMBER": 1000000000.0,
+        "NETSTIMRES_START": 100
+    },
+    "protocol": {
+        "Dong_SSt": {
+            "DONG_COM_START": 300020,
+            "DONG_INTERPULSE_INTERVAL": 200,
+            "DONG_PULSES_NUM": 600,
+            "DONG_SCH_START": 300000,
+            "DONG_STIMULATED_PERC": 1.0,
+            "DONG_WEIGHT": 0.00073
+        },
+        "Pavlowsky_Alarcon": {
+            "HFS_INTERTRAIN": 180000,
+            "HFS_START": 100000,
+            "HFS_STIMULATED_PERC": 0.8,
+            "HFS_TRAINS_NUM": 4,
+            "HFS_WEIGHT": 0.0002,
+            "LFS_START": 300000,
+            "LFS_STIMULATED_PERC": 1.0,
+            "LFS_STIM_LEN": 900000,
+            "LFS_WEIGHT": 0.0002,
+            "PP_NUM": 900,
+            "PP_START": 100000,
+            "PP_STIMULATED_PERC": 0.8,
+            "PP_WEIGHT": 0.00072
+        },
+        "square_pulses": {
+            "SQ_PULSES_NUM": 5,
+            "SQ_INTERPULSE_INTERVAL": 200,
+            "SQ_FREQUENCY": 100,
+            "SQ_INTERSPIKE_INTERVAL": 10,
+            "SQ_STIMULI_NUM": 100,
+            "SQ_START": 10000,
+            "SQ_WEIGHT": 0.0073
+        },
+        "theta_burst": {
+            "TB_STIMULI_NUM": 2,
+            "TB_INTERSPIKE_INTERVAL": 10,
+            "TB_BURSTS_NUM": 5,
+            "TB_INTERBURST_INTERVAL": 200,
+            "TB_PATTERNS_NUM": 3,
+            "TB_PATTERNS_INTERVAL": 3000,
+            "TB_START": 200,
+            "TB_STIMULATED_PERC": 1.0
+        },
+        "theta_burst_iclamp": {
+            "TB_ICLAMP_AMP": 1.4,
+            "TB_ICLAMP_DUR": 3,
+            "TB_ICLAMP_STIMULI_NUM": 3,
+            "TB_ICLAMP_INTERSPIKE_INTERVAL": 20,
+            "TB_ICLAMP_BURSTS_NUM": 5,
+            "TB_ICLAMP_INTERBURST_INTERVAL": 200,
+            "TB_ICLAMP_PATTERNS_NUM": 3,
+            "TB_ICLAMP_PATTERNS_INTERVAL": 3000,
+            "TB_ICLAMP_START": 207
+        },
+        "SEClamp": {
+            "DUR1": 10000,
+            "AMP1": -70.0
+        },
+        "Makara_LTP": {
+            "LTP_STIMULI_NUM": 50,
+            "LTP_INTERVAL": 333.33,
+            "LTP_START": 12000,
+            "PRELTP_TEST_NUM": 6,
+            "PRELTP_TEST_INTERVAL": 2000,
+            "PRELTP_TEST_START": 500,
+            "POSTLTP_TEST_NUM": 6,
+            "POSTLTP_TEST_INTERVAL": 2000,
+            "POSTLTP_TEST_START": 29000
+        }
+    },
+    "simulation": {
+        "DT": 0.025,
+        "RECORDING_STEP": 1.0,
+        "TSTOP": 10000,
+        "NUM_SEGMENTS": 10,
+        "SEG_DURATION": 1000,
+        "SEED": 1,
+        "NA_SLOW_INACT": 1.0
+    },
+    "synapse": {
+        "AMPA_DTAU": 15.0,
+        "AMPA_E": 0,
+        "AMPA_PTAU": 15.0,
+        "AMPA_START": 0,
+        "AMPA_TAU1": 0.2,
+        "AMPA_TAU2": 2,
+        "AMPA_GMAX": 0.00018,
+        "AMPA_GMAX_MEAN": 0.00018,
+        "AMPA_GMAX_SIGMA": 0.35,
+        "AMPA_P0": 0.009,
+        "AMPA_D0": 0.0012,
+        "NMDA_E": 0,
+        "NMDA_TAU1": 1,
+        "NMDA_TAU2": 50,
+        "NMDA_GMAX": 0.00018,
+        "SCALING_FACTOR": 1.0
+    },
+    "dends_recordings": [
+        "dendA5_011111111111111111",
+        "dendA5_011111111111111110",
+        "dendA5_0111111111111111111",
+        "dendA5_0111111111111111101",
+        "dendA5_0111111111111111100",
+        "dendA5_01111111111111111111",
+        "dendA5_01111111111111111110",
+        "dendA5_01111111111111111011",
+        "dendA5_01111111111111111010",
+        "dendA5_011111111111111111111",
+        "dendA5_011111111111111111110",
+        "dendA5_011111111111111111101",
+        "dendA5_011111111111111111100",
+        "dendA5_011111111111111110111",
+        "dendA5_011111111111111110110",
+        "dendA5_0111111111111111111111",
+        "dendA5_0111111111111111111110",
+        "dendA5_0111111111111111111011",
+        "dendA5_0111111111111111111010"
+    ]
+}

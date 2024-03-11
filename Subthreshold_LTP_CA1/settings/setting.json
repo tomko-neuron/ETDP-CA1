@@ -15,9 +15,11 @@
   "simulation": {
     "DT": 0.025,
     "RECORDING_STEP": 1.0,
-    "TSTOP": 40000,
-    "NUM_SEGMENTS": 8,
-    "SEG_DURATION": 5000
+    "TSTOP": 10000,
+    "NUM_SEGMENTS": 10,
+    "SEG_DURATION": 1000,
+    "SEED": 1,
+    "NA_SLOW_INACT": 1.0
   },
   "synapse": {
     "AMPA_DTAU": 15.0,
@@ -33,6 +35,6 @@
     "NMDA_TAU1": 2,
     "NMDA_TAU2": 50,
     "NMDA_GMAX": 0.0008,
-    "SCALING_FACTOR": 1.3
+    "SCALING_FACTOR": 1.0
   }
 }

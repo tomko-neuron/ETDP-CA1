@@ -5,12 +5,10 @@ from CA1_plasticity.model.utils import RecordingVector
 from CA1_plasticity.model.utils import Synapse
 import sys
 
-
 class CA1:
 
     def __init__(self, setting):
         self.setting = setting
-        # h.nrn_load_dll('C:/Users/tomko/PycharmProjects/Neuron_CA1/Dist_tuft_LTP_CA1/mods/nrnmech.dll')
         load_mechanisms('./mods/')
         h.xopen('./hoc/morphology_ri06.nrn')
         h.xopen('./hoc/naceaxon.nrn')
@@ -96,8 +94,19 @@ class CA1:
         rand_gen_anat = h.Random(self.setting['simulation']['SEED'] + 1e6)
         rand_gen_anat.uniform(0, 1)
 
-        AMPA_gmax = self.setting['synapse']['AMPA_GMAX'] * self.setting['synapse']['SCALING_FACTOR']
-        NMDA_gmax = self.setting['synapse']['NMDA_GMAX'] * self.setting['synapse']['SCALING_FACTOR']
+        # AMPA_gmax = self.setting['synapse']['AMPA_GMAX'] * self.setting['synapse']['SCALING_FACTOR']
+        # NMDA_gmax = self.setting['synapse']['NMDA_GMAX'] * self.setting['synapse']['SCALING_FACTOR']
+
+        # Generate random synaptic weigths from normal distribution
+        num_weights = 150
+        mean_weight = self.setting['synapse']['AMPA_GMAX_MEAN']
+        sigma = self.setting['synapse']['AMPA_GMAX_SIGMA']
+
+        # Generate random weights from a normal distribution
+        # synaptic_weights = np.random.normal(loc=mean_weight, scale=sigma, size=num_weights)
+
+        # Generate random weights from a log-normal distribution
+        synaptic_weights = np.random.lognormal(mean=np.log(mean_weight), sigma=sigma, size=num_weights)
 
         cur_syn = 0
         h('access somaA')
@@ -122,6 +131,7 @@ class CA1:
             syn_ampa.d = self.setting['synapse']['AMPA_D0']
             syn_ampa.p = self.setting['synapse']['AMPA_P0']
 
+            AMPA_gmax = synaptic_weights[i] * self.setting['synapse']['SCALING_FACTOR']
             syn = Synapse(synapse=syn_ampa, synapse_id=i, section=h.secname(),
                           segment_x=cur_rand_anat_B,
                           distance=h.distance(cur_rand_anat_B), weight_vec=h.Vector(),
@@ -137,6 +147,7 @@ class CA1:
             syn_nmda.tau2 = self.setting['synapse']['NMDA_TAU1']
             syn_nmda.e = self.setting['synapse']['NMDA_E']
 
+            NMDA_gmax = synaptic_weights[i] * self.setting['synapse']['SCALING_FACTOR']
             syn = Synapse(synapse=syn_nmda, synapse_id=i, section=h.secname(),
                           segment_x=cur_rand_anat_B,
                           distance=h.distance(cur_rand_anat_B), weight_vec=h.Vector(),
@@ -246,9 +257,19 @@ class CA1:
 
     def apply_TTX(self):
         """Simulates the application of TTX as a reduction of sodium channel conductance."""
-        for sec in self.dends:
-            if h.ismembrane('nad', sec=sec):
-                sec.gbar_nad = sec.gbar_nad * 0.2
+        ttxScale = 0.5  # amount that 20 nM TTX scales the available Na conductance; 1 = noblock; 0 = complete block
+        gnainit0 = 0.042    # Na conductance at soma
+        gnaslope0 = 0.000025    # Na channel density decay per um
+        gnainit = gnainit0 * ttxScale
+        gnaslope = gnaslope0 * ttxScale
+
+        h('access somaA')
+        h('area(0.5)')
+        h('distance()')
+        for sec in self.all_apicals:
+            for x in sec:
+                xdist = h.distance(x, sec=sec)
+                x.gbar_nax = gnainit - xdist * gnaslope
 
 
     def set_theta_burst_iclamp(self, stim):

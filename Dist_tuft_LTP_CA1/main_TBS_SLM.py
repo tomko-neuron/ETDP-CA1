@@ -89,8 +89,8 @@ def run_segmented_simulation(cell):
 def figures():
     """Shows selected figures."""
     fs = FiguresShower(setting=setting, save_figures=False,
-                       path_saving='./recordings/5stim_3xTBS/01_01/',
-                       path_recordings='./recordings/5stim_3xTBS/01_01/')
+                       path_saving='./recordings/no_inac/5stim_3xTBS/01/',
+                       path_recordings='./recordings/no_inac/5stim_3xTBS/01/')
     fs.show_somatic_voltage()
     fs.show_dendritic_voltage(threshold=-37)
     fs.show_na_current()
@@ -106,7 +106,7 @@ def figures():
 
 
 if __name__ == '__main__':
-    ioh = IOHelper(path_saving='./recordings/5stim_3xTBS/01_01/',
+    ioh = IOHelper(path_saving='./recordings/no_inac/5stim_3xTBS/01/',
                    path_settings='./settings_distLTP/')
     try:
         setting = ioh.load_setting()
@@ -117,4 +117,4 @@ if __name__ == '__main__':
     set_simulation_settings()
     # run_segmented_simulation(cell=cell)
     ioh.delete_temporary_files()
-    figures()
+    # figures()

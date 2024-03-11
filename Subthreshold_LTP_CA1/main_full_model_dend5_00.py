@@ -238,4 +238,4 @@ if __name__ == '__main__':
     set_simulation_settings()
     # run_segmented_simulation(cell=cell)
     ioh.delete_temporary_files()
-    figures()
+    # figures()

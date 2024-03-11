@@ -1,0 +1,32 @@
+{
+    "12_synapses_proximal": {
+        "mean": 1.0,
+        "std": 0.0,
+        "sem": 0.0
+    },
+    "14_synapses_proximal": {
+        "mean": 1.0,
+        "std": 0.0,
+        "sem": 0.0
+    },
+    "16_synapses_proximal": {
+        "mean": 1.0,
+        "std": 0.0,
+        "sem": 0.0
+    },
+    "4_11_synapses_proximal": {
+        "mean": 1.1882383389749687,
+        "std": 0.00035848794173922474,
+        "sem": 9.25611885448128e-05
+    },
+    "4_synapses_distal_short": {
+        "mean": 1.0173645799122153,
+        "std": 0.0,
+        "sem": 0.0
+    },
+    "8_synapses_distal_short": {
+        "mean": 1.0173696841073947,
+        "std": 1.4114786297609438e-05,
+        "sem": 4.990330553019298e-06
+    }
+}

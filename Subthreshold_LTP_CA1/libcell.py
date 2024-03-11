@@ -12,7 +12,6 @@ class CA1:
     def __init__(self, hoc_model, path_mods, setting, ttx=False):
         self.setting = setting
         load_mechanisms(path_mods)
-        # h.nrn_load_dll('C:/Users/tomko/PycharmProjects/Neuron_CA1/Subthreshold_LTP_CA1/mods/nrnmech.dll')
         s = 'xopen("' + hoc_model + '")'
         h(s)
         propsCA1(self, ttx=ttx)
